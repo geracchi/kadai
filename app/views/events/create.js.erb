@@ -1,0 +1,7 @@
+<!--アラートを出す-->
+alert('OK');
+<!--フォームをリセット-->
+$('input[type="text"]').val('');
+$('input[type="datetime-local"]').val('');
+<!--カレンダーを一度消し、再表示-->
+$('#calendar').fullCalendar('refetchEvents');

@@ -1,0 +1,10 @@
+<div class="contents row">
+  <p><%= @name %>さんの投稿履歴</p>
+    <% @events.each do |event| %>
+      <div class="content_post" >
+        <span class="created_time">作成日時：<%= event.created_at %></span>
+        <span class="title">場所：<%= event.title %></span>
+        <span class="body">内容：<%= event.body%></span>
+      </div>
+    <% end %>
+</div>

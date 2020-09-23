@@ -1,0 +1,16 @@
+<h1>一覧ページ</h1>
+<p>訪問先を入力して検索してください</p>
+    <%= form_with url: events_search_path, method: :get, local: true do |form| %>
+    <%= form.text_field :search %>
+    <%= form.submit 'Search', name: nil %>
+    <% end %>
+
+<% @events.each do |event| %>
+    <div class="content_post" >
+      <span class="created_time">作成日時：<%= event.created_at %></span>
+      <span class="title">訪問先：<%= event.title %></span>
+      <span class="body">実施内容：<%= event.body %></span>
+    </div>
+<% end %>
+<a class="btn" href="/events">戻る</a>
+
